@@ -36,12 +36,12 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         // Gate Based On Multiple Roles
-        Ability::all()->each(function ($ability) {
+        Ability::all()->each(function (Ability $ability) {
             Gate::define($ability->sku, function (User $user) use ($ability) {
 
                 $check = false;
                 foreach ($user->roles as $role) {
-                    if ($role->abilities->contains('sku', $ability)) {
+                    if ($role->abilities->contains('sku', $ability->sku)) {
                         $check = true;
                         break;
                     }

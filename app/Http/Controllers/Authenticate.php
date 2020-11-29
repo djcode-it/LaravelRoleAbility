@@ -15,22 +15,31 @@ class Authenticate extends Controller
      */
     public function Login(Request $request): User
     {
-        $user = \App\Models\User::findOrFail($request->id);
-
-        $ability = 'update-post';
-
-        $check = false;
-        foreach ($user->roles as $role) {
-            if ($role->abilities->contains('sku', $ability)) {
-                $check = true;
-                break;
-            }
-        }
-
-        dd($check);
+        $user = \App\Models\User::where('name', 'like', "%{$request->name}%")->firstOrFail();
 
         Auth::login($user);
+
         return $user;
+    }
+
+    /**
+     * @param Request $request
+     * @return mixed
+     */
+    public function GetUserRoles(Request $request)
+    {
+        abort_if(!Auth::check(), 403);
+        return Auth::user()->roles;
+    }
+
+    /**
+     * @param Request $request
+     * @return mixed
+     */
+    public function GetUserAbilities(Request $request)
+    {
+        abort_if(!Auth::check(), 403);
+        return Auth::user()->roles()->with('abilities')->get();
     }
 
     /**

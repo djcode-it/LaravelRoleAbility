@@ -44,11 +44,11 @@ Route::get('/user/{name}/role/detach/{ids}', [Management::class, 'DetachUserRole
 // Authenticate & Check user
 Route::get('/user/create/{name}/{email}/{password}', [Management::class, 'CreateUser']);
 
-Route::get('/user/auth/{id}', [Authenticate::class, 'Login']);
+Route::get('/user/{name}/auth', [Authenticate::class, 'Login']);
 
-Route::get('/user/{name}/roles', [Management::class, 'GetRoles']);
+Route::get('/user/{name}/roles', [Authenticate::class, 'GetUserRoles']);
 
-Route::get('/user/{name}/abilities', [Management::class, 'GetAbilities']);
+Route::get('/user/{name}/abilities', [Authenticate::class, 'GetUserAbilities']);
 
 Route::get('/user/logout', [Authenticate::class, 'Logout']);
 
