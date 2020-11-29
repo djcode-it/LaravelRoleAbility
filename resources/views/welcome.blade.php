@@ -41,8 +41,8 @@
         </div>
 
         <div class="mt-8">
+            <p class="border-b text-center uppercase mb-3">User $role</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
                 @foreach(\App\Models\Role::all() as $role)
                     @can($role->sku)
                         <div class="p-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
@@ -56,32 +56,8 @@
                                           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
                                 </svg>
                                 <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="#!"
+                                    <a href="/{{$role->sku}}"
                                        class="underline text-gray-900 dark:text-white">Role::{{$role->sku}}</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endcan
-                @endforeach
-
-            </div>
-        </div>
-
-        <div class="mt-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                @foreach(\App\Models\Ability::all() as $ability)
-                    @can($ability->sku)
-                        <div class="p-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                            <div class="flex items-center">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                                </svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="#!"
-                                       class="underline text-gray-900 dark:text-white">Ability::{{$ability->sku}}</a>
                                 </div>
                             </div>
                         </div>
