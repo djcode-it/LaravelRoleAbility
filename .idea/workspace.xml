@@ -10,19 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c5d31a-4a09-4d2d-a691-93d8f32b24dc" name="Default Changelist" comment="Update table">
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="d9c5d31a-4a09-4d2d-a691-93d8f32b24dc" name="Default Changelist" comment="Global Helper and Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Management.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Management.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ability.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ability.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +170,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -196,7 +187,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606657784035</updated>
-      <workItem from="1606657785084" duration="5907000" />
+      <workItem from="1606657785084" duration="6213000" />
     </task>
     <task id="LOCAL-00001" summary="Updates">
       <created>1606660877956</created>
@@ -212,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606662251448</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Global Helper and Fix">
+      <created>1606663868568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606663868568</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +230,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates" />
     <MESSAGE value="Update table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update table" />
+    <MESSAGE value="Global Helper and Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Global Helper and Fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="389" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606657897136">
@@ -247,10 +246,14 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="944" y="435" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606662138622" />
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606660883271">
+    <state x="656" y="297" key="SettingsEditor" timestamp="1606664025589">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606660883271" />
+    <state x="656" y="297" key="SettingsEditor/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606664025589" />
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606663872337">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606663872337" />
     <state x="1034" y="623" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606660772931">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
