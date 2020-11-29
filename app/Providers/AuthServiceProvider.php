@@ -28,19 +28,29 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-//        Gate::define('edit-settings', function (User $user) {
-//            return $user->isAdmin;
-//        });
-
-        Ability::all()->each(function ($role) {
-            Gate::define($role->sku, function (User $user) {
-                return $user->roles;
+        // Gate based on Roles
+        Role::all()->each(function (Role $role) {
+            Gate::define($role->sku, function (User $user) use ($role) {
+                return $user->roles->contains('sku', $role->sku);
             });
         });
 
-        // Return All Abilities
-//        dd(
-//            Gate::abilities()
-//        );
+        // Gate Based On Multiple Roles
+        Ability::all()->each(function ($ability) {
+            Gate::define($ability->sku, function (User $user) use ($ability) {
+
+                $check = false;
+                foreach ($user->roles as $role) {
+                    if ($role->abilities->contains('sku', $ability)) {
+                        $check = true;
+                        break;
+                    }
+                }
+                return $check;
+
+            });
+        });
+
+
     }
 }

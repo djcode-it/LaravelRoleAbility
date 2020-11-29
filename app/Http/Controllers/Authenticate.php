@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,17 @@ class Authenticate extends Controller
     {
         $user = \App\Models\User::findOrFail($request->id);
 
-        dd($user->roles);
+        $ability = 'update-post';
+
+        $check = false;
+        foreach ($user->roles as $role) {
+            if ($role->abilities->contains('sku', $ability)) {
+                $check = true;
+                break;
+            }
+        }
+
+        dd($check);
 
         Auth::login($user);
         return $user;
