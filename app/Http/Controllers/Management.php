@@ -17,7 +17,12 @@ class Management extends Controller
      */
     public function CreateUser(Request $request): User
     {
-        abort_if(!$request->name || !$request->email || !$request->password, 403);
+        abort_if(
+            !$request->name ||
+            !$request->email ||
+            !$request->password ||
+            User::where('email', $request->email)
+            , 403);
 
         return User::create([
             'name' => $request->name,
@@ -97,7 +102,7 @@ class Management extends Controller
      */
     public function SyncRoleAbilities(Request $request): Collection
     {
-        abort_if(!$request->sku, 403);
+        abort_if(!$request->sku || Ability::whereIn('id', explode(',', $request->ids)), 403);
 
         $role = Role::where('sku', 'like', "%{$request->sku}%")->firstOrFail();
 
@@ -113,7 +118,7 @@ class Management extends Controller
      */
     public function AttachRoleAbilities(Request $request): Collection
     {
-        abort_if(!$request->sku, 403);
+        abort_if(!$request->sku || Ability::whereIn('id', explode(',', $request->ids)), 403);
 
         $role = Role::where('sku', 'like', "%{$request->sku}%")->firstOrFail();
 
@@ -129,7 +134,7 @@ class Management extends Controller
      */
     public function DetachRoleAbilities(Request $request): Collection
     {
-        abort_if(!$request->sku, 403);
+        abort_if(!$request->sku || Ability::whereIn('id', explode(',', $request->ids)), 403);
 
         $role = Role::where('sku', 'like', "%{$request->sku}%")->firstOrFail();
 
@@ -146,7 +151,7 @@ class Management extends Controller
      */
     public function SyncUserRole(Request $request): Collection
     {
-        abort_if(!$request->name, 403);
+        abort_if(!$request->name || Role::whereIn('id', explode(',', $request->ids)), 403);
 
         $user = User::where('name', 'like', "%{$request->name}%")->firstOrFail();
 
@@ -162,7 +167,7 @@ class Management extends Controller
      */
     public function AttachUserRole(Request $request): Collection
     {
-        abort_if(!$request->name, 403);
+        abort_if(!$request->name || Role::whereIn('id', explode(',', $request->ids)), 403);
 
         $user = User::where('name', 'like', "%{$request->name}%")->firstOrFail();
 
@@ -178,7 +183,7 @@ class Management extends Controller
      */
     public function DetachUserRole(Request $request): Collection
     {
-        abort_if(!$request->name, 403);
+        abort_if(!$request->name || Role::whereIn('id', explode(',', $request->ids)), 403);
 
         $user = User::where('name', 'like', "%{$request->name}%")->firstOrFail();
 

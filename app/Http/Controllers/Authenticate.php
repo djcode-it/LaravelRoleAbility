@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,10 +10,16 @@ class Authenticate extends Controller
 {
     /**
      * @param Request $request
+     * @return User
      */
-    public function Login(Request $request): void
+    public function Login(Request $request): User
     {
-        Auth::login(\App\Models\User::findOrFail($request->id));
+        $user = \App\Models\User::findOrFail($request->id);
+
+        dd($user->roles);
+
+        Auth::login($user);
+        return $user;
     }
 
     /**

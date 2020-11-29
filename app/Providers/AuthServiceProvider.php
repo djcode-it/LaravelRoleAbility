@@ -34,7 +34,7 @@ class AuthServiceProvider extends ServiceProvider
 
         Ability::all()->each(function ($role) {
             Gate::define($role->sku, function (User $user) {
-                return $user->isAdmin;
+                return $user->roles;
             });
         });
 
