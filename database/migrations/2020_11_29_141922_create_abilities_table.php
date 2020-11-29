@@ -15,6 +15,8 @@ class CreateAbilitiesTable extends Migration
     {
         Schema::create('abilities', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('sku');
             $table->timestamps();
         });
     }

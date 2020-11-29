@@ -10,7 +10,7 @@ class Authenticate extends Controller
     /**
      * @param Request $request
      */
-    public function login(Request $request): void
+    public function Login(Request $request): void
     {
         Auth::login(\App\Models\User::findOrFail($request->id));
     }
@@ -18,7 +18,7 @@ class Authenticate extends Controller
     /**
      * @param Request $request
      */
-    public function logout(Request $request): void
+    public function Logout(Request $request): void
     {
         Auth::logout();
     }

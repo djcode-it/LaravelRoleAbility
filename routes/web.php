@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Management;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authenticate;
@@ -15,25 +16,22 @@ use App\Http\Controllers\Authenticate;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
-Route::get('/user/auth', [Authenticate::class, 'login']);
+// Manage With Ability
+Route::get('/role/create/{sku}', [Management::class, 'CreateRole']);
 
-Route::get('/user/create', function () {
-    User::create([
-        'name' => 'djcode',
-        'email' => 'test@gmail.com',
-        'password' => \Illuminate\Support\Facades\Hash::make('123456')
-    ]);
-});
+Route::get('/ability/create/{sku}', [Management::class, 'CreateAbility']);
 
-Route::get('/user/create', function () {
-    User::create([
-        'name' => 'djcode',
-        'email' => 'test@gmail.com',
-        'role' => 'staff',
-        'password' => \Illuminate\Support\Facades\Hash::make('123456')
-    ]);
-});
+// Attach & Sync Ability to the user
+
+
+Route::get('/user/auth/{id}', [Authenticate::class, 'Login']);
+
+Route::get('/user/create/{name}/{email}/{password}', [Management::class, 'CreateUser']);
+
+Route::get('/user/{name}/roles', [Management::class, 'GetRoles']);
+
+Route::get('/user/{name}/abilities', [Management::class, 'GetAbilities']);
+
+Route::get('/user/logout', [Authenticate::class, 'Logout']);

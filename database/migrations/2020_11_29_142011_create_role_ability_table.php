@@ -15,6 +15,8 @@ class CreateRoleAbilityTable extends Migration
     {
         Schema::create('role_ability', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ability_id');
+            $table->foreignId('role_id');
             $table->timestamps();
         });
     }
