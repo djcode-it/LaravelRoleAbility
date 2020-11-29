@@ -21,7 +21,7 @@ class Management extends Controller
             !$request->name ||
             !$request->email ||
             !$request->password ||
-            User::where('email', $request->email)
+            User::where('email', $request->email)->exists()
             , 403);
 
         return User::create([

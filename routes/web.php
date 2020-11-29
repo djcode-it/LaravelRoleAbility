@@ -53,6 +53,14 @@ Route::get('/user/{name}/abilities', [Authenticate::class, 'GetUserAbilities']);
 Route::get('/user/logout', [Authenticate::class, 'Logout']);
 
 
+// User Access Role Based Middleware
+Route::view('/admin', 'admin')->middleware('roles:admin');
+
+Route::view('/staff', 'staff')->middleware('roles:admin,staff');
+
+Route::view('/user', 'user')->middleware('roles:admin,staff,user');
+
+
 // Manage Global Utility
 Route::get('/users', [Management::class, 'GetUsers']);
 

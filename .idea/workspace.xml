@@ -11,9 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c5d31a-4a09-4d2d-a691-93d8f32b24dc" name="Default Changelist" comment="Fix User Role">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/staff.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Management.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Management.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -165,7 +169,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,8 +177,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\www\blog\resources\views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -190,7 +200,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606657784035</updated>
-      <workItem from="1606657785084" duration="10005000" />
+      <workItem from="1606657785084" duration="12987000" />
     </task>
     <task id="LOCAL-00001" summary="Updates">
       <created>1606660877956</created>
@@ -234,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606667433268</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix User Role">
+      <created>1606667982653</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606667982653</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,14 +288,18 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="944" y="435" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606662138622" />
+    <state x="969" y="540" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1606668954499">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="969" y="540" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606668954499" />
     <state x="656" y="297" key="SettingsEditor" timestamp="1606664025589">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="656" y="297" key="SettingsEditor/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606664025589" />
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606667436174">
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606667984074">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606667436174" />
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606667984074" />
     <state x="1034" y="623" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606660772931">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
