@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CustomEvent;
+use App\Mail\UserRegistred;
 use App\Models\Ability;
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -24,11 +28,23 @@ class Management extends Controller
             User::where('email', $request->email)->exists()
             , 403);
 
-        return User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => \Hash::make($request->password),
         ]);
+
+        $user->new_pass = $request->password;
+
+        // TODO: Invia email
+//        \Mail::to($user)->send(new UserRegistred($user));
+
+//        $user->notify(new \App\Notifications\UserRegistred($user));
+
+        event(new CustomEvent($user));
+
+        return $user;
+
     }
 
     /**
