@@ -1160,40 +1160,29 @@ SELECT|sys.sys_config:null
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="339" parent="291" name="role">
+    <column id="339" parent="291" name="remember_token">
       <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="340" parent="291" name="isAdmin">
-      <Position>7</Position>
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>0</DefaultExpression>
-    </column>
-    <column id="341" parent="291" name="remember_token">
-      <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="342" parent="291" name="created_at">
-      <Position>9</Position>
+    <column id="340" parent="291" name="created_at">
+      <Position>7</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="343" parent="291" name="updated_at">
-      <Position>10</Position>
+    <column id="341" parent="291" name="updated_at">
+      <Position>8</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="344" parent="291" name="users_email_unique">
+    <index id="342" parent="291" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="345" parent="291" name="PRIMARY">
+    <key id="343" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="346" parent="291" name="users_email_unique">
+    <key id="344" parent="291" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>

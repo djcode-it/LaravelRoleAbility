@@ -20,6 +20,9 @@ class UserRoleAccess
     public function handle(Request $request, Closure $next, ...$requiredRoles)
     {
 
+        // TODO: change yourself
+        if (!auth()->check()) abort(403, 'U must login to use role middleware');
+
         $userRoles = $request->user()->roles->pluck('sku')->toArray();
 
         abort_if(0 === count(array_intersect($requiredRoles, $userRoles)), 403);

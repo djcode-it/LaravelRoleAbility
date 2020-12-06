@@ -11,18 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c5d31a-4a09-4d2d-a691-93d8f32b24dc" name="Default Changelist" comment="Fix User Role">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/101af266-e94d-4887-ad07-7d7d96da44e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/101af266-e94d-4887-ad07-7d7d96da44e3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/staff.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/UserRoleAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/UserRoleAccess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -196,7 +195,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606657784035</updated>
-      <workItem from="1606657785084" duration="13197000" />
+      <workItem from="1606657785084" duration="15306000" />
+      <workItem from="1607272481444" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="Updates">
       <created>1606660877956</created>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606670987425</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix User Role">
+      <created>1606671198616</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606671198616</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +277,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates" />
@@ -299,10 +307,10 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="656" y="297" key="SettingsEditor/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606664025589" />
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606670989347">
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2" timestamp="1606671200769">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606670989347" />
+    <state x="772" y="407" key="Vcs.Push.Dialog.v2/0.40.2560.1400/2560.243.1920.1040@0.40.2560.1400" timestamp="1606671200769" />
     <state x="1034" y="623" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606660772931">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
